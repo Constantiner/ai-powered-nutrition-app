@@ -1,13 +1,28 @@
-# GitHub Codespaces ♥️ Next.js
+# GPT-3 App with Next.js, React, and GitHub Copilot
 
-Welcome to your shiny new Codespace running Next.js! We've got everything fired up and running for you to explore Next.js.
+This is an implementation of the code from the tutorial found in [this article](https://github.blog/2023-07-25-how-to-build-a-gpt-3-app-with-nextjs-react-and-github-copilot/) for building a GPT-3 app with Next.js, React, and GitHub Copilot.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Getting Started
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+To get started with this implementation, follow these steps:
 
-To run this application:
+1. Clone this repository to your local machine.
+2. Install the necessary dependencies by running `npm install`.
+3. Create a `.env.local` file in the root directory of the project and add your OpenAI API key as follows:
 
+```properties
+OPENAI_API_KEY=your_api_key_here
 ```
-npm run dev
-```
+
+4. Run the development server by running `npm run dev`.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+
+## Contributing
+
+If you find any issues with this implementation or would like to contribute to its development, please open an issue or submit a pull request.
+
+## License
+
+This implementation is licensed under the [MIT License](LICENSE).

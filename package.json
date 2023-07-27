@@ -1,13 +1,64 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+	"private": true,
+	"version": "0.0.1",
+	"description": "Test app for AI powered nutrition app",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Constantiner/ai-powered-nutrition-app.git"
+	},
+	"keywords": [
+		"nutrition",
+		"ai",
+		"app",
+		"Next.js",
+		"React",
+		"Node",
+		"TypeScript",
+		"OpenAI"
+	],
+	"author": {
+		"name": "Konstantin Kovalev",
+		"email": "constantiner@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Constantiner/ai-powered-nutrition-app/issues"
+	},
+	"homepage": "https://github.com/Constantiner/ai-powered-nutrition-app#readme",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"lint:full": "next lint && npx tsc --noEmit && npx eslint '**/*.{js,jsx,ts,tsx}' && npx stylelint '**/*.{css,scss}'",
+		"prepare": "husky install",
+		"lint-staged": "npx lint-staged",
+		"format": "npx prettier --write '**/*.{js,ts,jsx,tsx,css,scss,json,htm,html,yml,eslintrc,huskyrc,lintstagedrc,prettierrc,stylelintrc}'"
+	},
+	"dependencies": {
+		"next": "^13.4.12",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.5",
+		"@types/react": "^18.2.17",
+		"@types/react-dom": "^18.0.11",
+		"eslint": "^8.5.0",
+		"eslint-config-next": "^13.4.12",
+		"eslint-config-prettier": "^8.9.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-security": "^1.7.1",
+		"eslint-plugin-unicorn": "^48.0.1",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.2.3",
+		"prettier": "^3.0.0",
+		"stylelint": "^15.10.2",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-recommended": "^13.0.0",
+		"stylelint-config-recommended-scss": "^12.0.0",
+		"stylelint-prettier": "^4.0.1",
+		"stylelint-scss": "^5.0.1",
+		"typescript": "^4.5.5"
+	}
 }
