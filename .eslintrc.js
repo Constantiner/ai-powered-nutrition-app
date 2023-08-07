@@ -33,6 +33,25 @@ module.exports = {
 	},
 	overrides: [
 		{
+			files: ["**/*.ts?(x)"],
+			parser: "@typescript-eslint/parser",
+			parserOptions: {
+				ecmaVersion: 2018,
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true
+				},
+
+				// typescript-eslint specific options
+				warnOnUnsupportedTypeScriptVersion: true
+			},
+			plugins: ["@typescript-eslint"],
+			extends: ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
+			rules: {
+				"@typescript-eslint/explicit-function-return-type": ["error"]
+			}
+		},
+		{
 			files: ["src/app/**/*.ts?(x)", "src/app/**/*.js?(x)"],
 			rules: {
 				"no-restricted-syntax": ["off"]

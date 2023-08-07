@@ -38,7 +38,30 @@
 					"return",
 					"warn",
 					"debug",
-					"extend"
+					"extend",
+					"tailwind"
+				]
+			}
+		],
+		"scss/at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": [
+					"value",
+					"mixin",
+					"include",
+					"use",
+					"for",
+					"each",
+					"if",
+					"else",
+					"at-root",
+					"function",
+					"return",
+					"warn",
+					"debug",
+					"extend",
+					"tailwind"
 				]
 			}
 		]
