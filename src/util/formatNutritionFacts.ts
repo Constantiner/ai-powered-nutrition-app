@@ -35,7 +35,7 @@ export const extractEmojiAndText = (
 	const splitString = inputString.split(regex);
 
 	// Reduce the array of lines into an array of nutrition facts and an emoji
-	return splitString.reduce<[string, string[]]>(
+	return splitString.reduce<[emoji: string, textLines: string[]]>(
 		([emoji, textLines], line) => {
 			// Extract the emoji and text from the current line
 			const [currentEmoji, textLine] = extractEmojiAndTextForLine(line);
