@@ -4,7 +4,7 @@ import { NutritionFacts } from "@/components/nutritionFacts/nutritionFacts";
 import { NutritionFactsForm } from "@/components/nutritionFacts/nutritionFactsForm";
 import { useHandleNutritionFactsForm } from "@/hooks/useHandleNutritionFactsForm";
 
-export default function Page(): JSX.Element {
+export default function NutritionFactsPage(): JSX.Element {
 	const { nutritionFacts, error, pending, formReference, handleSubmit, resetForm } = useHandleNutritionFactsForm();
 
 	return (
