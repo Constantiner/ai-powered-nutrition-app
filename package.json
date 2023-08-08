@@ -36,13 +36,10 @@
 		"format": "npx prettier --write '**/*.{js,ts,jsx,tsx,css,scss,json,htm,html,yml,eslintrc,huskyrc,lintstagedrc,prettierrc,stylelintrc}'"
 	},
 	"dependencies": {
-		"http-status-codes": "^2.2.0",
 		"next": "^13.4.12",
 		"openai": "^3.3.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"sass": "^1.64.2",
-		"zod": "^3.21.4"
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.4.5",
@@ -60,6 +57,7 @@
 		"lint-staged": "^13.2.3",
 		"postcss": "^8.4.27",
 		"prettier": "^3.0.0",
+		"sass": "^1.64.2",
 		"stylelint": "^15.10.2",
 		"stylelint-config-prettier": "^9.0.5",
 		"stylelint-config-recommended": "^13.0.0",
