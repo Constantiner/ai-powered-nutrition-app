@@ -14,27 +14,27 @@ export const NutritionFactsForm = forwardRef<HTMLFormElement, NutritionFactsForm
 	formReference
 ) {
 	return (
-		<section className="md:max-w-md md:border-r-2 pr-4 md:flex md:flex-col md:grow md:gap-1  md:shrink-0 md:my-auto">
-			<h1 className="text-3xl font-bold text-right py-8 md:shrink-0">
+		<section className="pr-4 md:my-auto md:flex md:max-w-md md:shrink-0 md:grow md:flex-col  md:gap-1 md:border-r-2">
+			<h1 className="py-8 text-right text-3xl font-bold md:shrink-0">
 				🍅 Find Nutrition Facts
 				<br />
 				for any recipe
 			</h1>
 			<form
-				className="w-full flex flex-wrap pb-6 flex-col items-end md:shrink-0"
+				className="flex w-full flex-col flex-wrap items-end pb-6 md:shrink-0"
 				onSubmit={handleSubmit}
 				ref={formReference}
 			>
 				<textarea
-					className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					className="mb-3 block w-full appearance-none rounded border bg-gray-200 px-4 py-2 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
 					name="recipe"
 					disabled={pending}
 					rows={5} // add this line to set the number of rows
 				/>
-				<div className="flex flex-row w-full mb-3 justify-end md:shrink-0">
+				<div className="mb-3 flex w-full flex-row justify-end md:shrink-0">
 					<button
-						className={`bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2 ${
-							pending ? "opacity-50 cursor-not-allowed" : ""
+						className={`mr-2 rounded bg-gray-500 px-4 py-2 font-bold text-white hover:bg-gray-700 ${
+							pending ? "cursor-not-allowed opacity-50" : ""
 						}`}
 						type="button"
 						onClick={resetForm}
@@ -43,8 +43,8 @@ export const NutritionFactsForm = forwardRef<HTMLFormElement, NutritionFactsForm
 						Clear
 					</button>
 					<button
-						className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${
-							pending ? "opacity-50 cursor-not-allowed" : ""
+						className={`rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 ${
+							pending ? "cursor-not-allowed opacity-50" : ""
 						}`}
 						type="submit"
 						disabled={pending}

@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }): JSX.E
 				<meta name="description" content={metadata.description} />
 				<link rel="icon" href="/favicon.ico" />
 			</head>
-			<body className={`font-sans ${inter.className} bg-gray-100 flex flex-col h-full w-full`}>
+			<body className={`font-sans ${inter.className} flex h-full w-full flex-col bg-gray-100`}>
 				<AppHeader />
 				<main className="h-full w-full overflow-y-auto">{children}</main>
 				<AppFooter />

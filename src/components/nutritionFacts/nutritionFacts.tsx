@@ -10,13 +10,13 @@ export const NutritionFacts: FunctionComponent<NutritionFactsProperties> = ({ nu
 
 	return (
 		<aside
-			className={`w-full md:max-w-md pl-4 flex flex-col ${
-				nutritionFacts ? "border-t-2 mb-10" : ""
-			} md:border-none pt-4 md:pt-0 md:shrink-0 md:grow md:my-auto`}
+			className={`flex w-full flex-col pl-4 md:max-w-md ${
+				nutritionFacts ? "mb-10 border-t-2" : ""
+			} pt-4 md:my-auto md:shrink-0 md:grow md:border-none md:pt-0`}
 		>
 			{nutritionFactList && nutritionFactList.length > 0 && (
 				<>
-					<h2 className="text-2xl font-bold mb-4 md:py-8">
+					<h2 className="mb-4 text-2xl font-bold md:py-8">
 						{mealEmoji && (
 							<span role="img" aria-label="nutrition facts emoji">
 								{mealEmoji}
@@ -24,7 +24,7 @@ export const NutritionFacts: FunctionComponent<NutritionFactsProperties> = ({ nu
 						)}{" "}
 						Nutrition Facts
 					</h2>
-					<ul className="list-['🍅'] ml-2">
+					<ul className="ml-2 list-['🍅']">
 						{nutritionFactList?.map((line, index) => (
 							<li key={index} className="mb-2 pl-1">
 								{line}

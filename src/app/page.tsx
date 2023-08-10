@@ -8,7 +8,7 @@ export default function NutritionFactsPage(): JSX.Element {
 	const { nutritionFacts, error, pending, formReference, handleSubmit, resetForm } = useHandleNutritionFactsForm();
 
 	return (
-		<div className="container mx-auto px-4 flex flex-col md:flex-row md:items-stretch md:justify-center md:h-full">
+		<div className="container mx-auto flex flex-col px-4 md:h-full md:flex-row md:items-stretch md:justify-center">
 			<NutritionFactsForm
 				ref={formReference}
 				error={error}

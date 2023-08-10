@@ -5,8 +5,8 @@ import openAiLogo from "./openai-logo.svg";
 
 export const AppFooter: FunctionComponent<Record<string, never>> = () => {
 	return (
-		<footer className="bg-gray-800 text-gray-300 py-4">
-			<div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+		<footer className="bg-gray-800 py-4 text-gray-300">
+			<div className="container mx-auto flex flex-col items-start justify-between px-4 md:flex-row md:items-center">
 				<div>
 					<p>
 						Made with ❤️ by{" "}
@@ -40,9 +40,9 @@ export const AppFooter: FunctionComponent<Record<string, never>> = () => {
 						</a>
 					</p>
 				</div>
-				<div className="flex gap-4 mt-5 md:mt-0">
-					<Image src={openAiLogo} alt="OpenAI" className="h-12 w-12 filter invert brightness-150" />
-					<Image src={copilotLogo} alt="GitHub Copilot" className="h-12 w-12 filter invert brightness-150" />
+				<div className="mt-5 flex gap-4 md:mt-0">
+					<Image src={openAiLogo} alt="OpenAI" className="h-12 w-12 brightness-150 invert filter" />
+					<Image src={copilotLogo} alt="GitHub Copilot" className="h-12 w-12 brightness-150 invert filter" />
 				</div>
 			</div>
 		</footer>
