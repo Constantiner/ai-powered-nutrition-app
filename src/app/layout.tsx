@@ -19,7 +19,6 @@ export default function RootLayout({ children }: { children: ReactNode }): JSX.E
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<title>{metadata.title}</title>
 				<meta name="description" content={metadata.description} />
-				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body className={`font-sans ${inter.className} flex h-full w-full flex-col bg-gray-100`}>
 				<AppHeader />
