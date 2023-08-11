@@ -1,12 +1,13 @@
 import { AppFooter } from "@/components/layout/appFooter";
 import { AppHeader } from "@/components/layout/appHeader";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: "Nutrition App",
 	description: "🍅 Find Nutrition Facts for any recipe"
 };
