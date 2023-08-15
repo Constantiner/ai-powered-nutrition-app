@@ -1,5 +1,7 @@
 # GPT-3 App with Next.js, React, and GitHub Copilot
 
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+
 This is an implementation of the code from the tutorial found in [this article](https://github.blog/2023-07-25-how-to-build-a-gpt-3-app-with-nextjs-react-and-github-copilot/) for building a GPT-3 app with Next.js, React, and GitHub Copilot.
 
 ## Getting Started
