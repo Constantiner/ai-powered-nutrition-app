@@ -68,6 +68,48 @@ module.exports = {
 			}
 		},
 		{
+			files: ["src/**/*.ts?(x)", "src/**/*.js?(x)"],
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true
+				},
+				ecmaVersion: 2020,
+				sourceType: "module"
+			},
+			env: {
+				browser: true,
+				commonjs: true,
+				es6: true,
+				node: true
+			},
+			plugins: ["react-hooks", "react", "jsx-a11y", "react-refresh"],
+			extends: [
+				"plugin:jsx-a11y/recommended",
+				"plugin:react/recommended",
+				"plugin:react-hooks/recommended",
+				"plugin:react/jsx-runtime"
+			],
+			rules: {
+				"react-hooks/rules-of-hooks": "error",
+				"react-hooks/exhaustive-deps": "warn",
+				"react/jsx-uses-react": "off",
+				"react/react-in-jsx-scope": "off",
+				"react/prop-types": [2, { ignore: ["children"] }],
+				"react-refresh/only-export-components": [
+					"warn",
+					{ allowConstantExport: true, allowExportNames: ["metadata"] }
+				]
+			},
+			settings: {
+				react: {
+					version: "detect" // React version. "detect" automatically picks the version you have installed.
+					// You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+					// default to latest and warns if missing
+					// It will default to "detect" in the future
+				}
+			}
+		},
+		{
 			files: ["**/*.d.ts"],
 			rules: {
 				"@typescript-eslint/triple-slash-reference": ["off"],
@@ -78,22 +120,12 @@ module.exports = {
 			}
 		},
 		{
-			files: ["jest.config*.(c)js", "**/jest.config*.(c)js", ".eslintrc*.(c)js", "**/.eslintrc*.(c)js"],
+			files: [".eslintrc*.(c)js", "**/.eslintrc*.(c)js"],
 			rules: {
 				"node/no-unpublished-require": ["off"],
 				"unicorn/prefer-module": ["off"],
 				"unicorn/filename-case": ["off"],
 				"no-undef": ["off"]
-			},
-			env: {
-				commonjs: true,
-				node: true
-			}
-		},
-		{
-			files: ["vite.config.ts", "**/vite.config.ts", "jest.config.ts", "**/jest.config.ts"],
-			rules: {
-				"no-restricted-syntax": ["off"]
 			},
 			env: {
 				commonjs: true,
