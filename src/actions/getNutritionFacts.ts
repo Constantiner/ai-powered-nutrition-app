@@ -1,16 +1,14 @@
 "use server";
 
-import { Configuration, OpenAIApi } from "openai";
+import { OpenAI } from "openai";
 import promptJson from "./prompt.json";
 
-const configuration = new Configuration({
+const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY
 });
 
-const openai = new OpenAIApi(configuration);
-
 export const getNutritionFacts = async (recipe: string): Promise<string> => {
-	const completion = await openai.createChatCompletion({
+	const completion = await openai.chat.completions.create({
 		max_tokens: 200,
 		temperature: 0.9,
 		n: 1,
@@ -18,7 +16,7 @@ export const getNutritionFacts = async (recipe: string): Promise<string> => {
 		messages: [{ role: "user", content: `${promptJson.recipePrompt} ${recipe}` }]
 	});
 
-	const response = completion.data.choices[0].message?.content;
+	const response = completion.choices[0].message?.content;
 	if (!response) {
 		throw new Error("No response from OpenAI");
 	}

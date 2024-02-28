@@ -1,14 +1,23 @@
-/* eslint-disable unicorn/prefer-module */
 module.exports = {
-	plugins: ["prettier", "unicorn", "security"],
+	root: true,
+	env: { es2020: true },
+	plugins: ["prettier", "unicorn", "import"],
 	extends: [
 		"next/core-web-vitals",
 		"eslint:recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
 		"plugin:unicorn/recommended",
-		"plugin:security/recommended",
 		"plugin:prettier/recommended",
 		"prettier"
 	],
+	ignorePatterns: ["dist"],
+	parserOptions: {
+		parser: "@babel/eslint-parser",
+		requireConfigFile: false,
+		ecmaVersion: 2020,
+		sourceType: "module"
+	},
 	rules: {
 		semi: ["error", "always"],
 		"unicorn/filename-case": ["error", { case: "camelCase" }],
@@ -29,7 +38,8 @@ module.exports = {
 		"unicorn/no-array-callback-reference": "off",
 		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prefer-object-from-entries": ["off"],
-		"unicorn/no-useless-undefined": "off"
+		"unicorn/no-useless-undefined": "off",
+		"no-else-return": ["error", { allowElseIf: false }]
 	},
 	overrides: [
 		{
@@ -66,6 +76,44 @@ module.exports = {
 				"no-restricted-syntax": ["off"],
 				"unicorn/filename-case": ["off"]
 			}
+		},
+		{
+			files: ["jest.config*.(c)js", "**/jest.config*.(c)js", ".eslintrc*.(c)js", "**/.eslintrc*.(c)js"],
+			rules: {
+				"node/no-unpublished-require": ["off"],
+				"unicorn/prefer-module": ["off"],
+				"unicorn/filename-case": ["off"],
+				"no-undef": ["off"]
+			},
+			env: {
+				commonjs: true,
+				node: true
+			}
+		},
+		{
+			files: ["vite.config.ts", "**/vite.config.ts", "jest.config.ts", "**/jest.config.ts"],
+			rules: {
+				"no-restricted-syntax": ["off"]
+			},
+			env: {
+				commonjs: true,
+				node: true
+			}
+		},
+		{
+			files: ["**/*.cjs"],
+			env: {
+				es2023: true,
+				node: true
+			}
 		}
-	]
+	],
+	settings: {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			typescript: {} // this loads <rootdir>/tsconfig.json to eslint
+		}
+	}
 };
